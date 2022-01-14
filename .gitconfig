@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	diffm = diff master...@
+	pullr = pull --rebase
+	cia = commit --amend
+	diffs = diff --staged
