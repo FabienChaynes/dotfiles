@@ -140,14 +140,14 @@ type = internal/network
 interval = 5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+label-disconnected = %{A3:terminator -x nmtui:}%{F#F0C674}%ifname%%{F#707880}%{A} disconnected
 
 [module/wlan]
 inherit = network-base
 interface = wlp0s20f3
 interface-type = wireless
 
-format-connected-prefix=" "
+format-connected-prefix="%{A3:terminator -x nmtui:}%{A} "
 format-connected-prefix-foreground = ${colors.primary}
 label-connected = %essid% - %signal%%
 
@@ -156,7 +156,7 @@ inherit = network-base
 interface = wwan0
 interface-type = wired
 
-format-connected-prefix=" "
+format-connected-prefix="%{A3:terminator -x nmtui:}%{A} "
 format-connected-prefix-foreground = ${colors.primary}
 label-connected = %ifname% %local_ip%
 
@@ -167,7 +167,7 @@ interval = 1
 date = %Y-%m-%d %H:%M:%S
 date-alt = %H:%M
 
-format-prefix=" "
+format-prefix="%{A3:time-admin:}%{A} "
 format-prefix-foreground = ${colors.primary}
 label = %date%
 
