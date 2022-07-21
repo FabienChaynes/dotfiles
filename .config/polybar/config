@@ -167,7 +167,7 @@ interval = 1
 date = %Y-%m-%d %H:%M:%S
 date-alt = %H:%M
 
-format-prefix="%{A3:time-admin:}%{A} "
+format-prefix="%{A3:gnome-calendar:}%{A} "
 format-prefix-foreground = ${colors.primary}
 label = %date%
 

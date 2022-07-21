@@ -217,6 +217,7 @@ bindsym $mod+p exec peek
 for_window [class="Cheese"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Shutter"] floating enable
+for_window [class="Gnome-calendar"] floating enable
 
 # Colors
 # class                 border  backgr. text    indicator child_border
