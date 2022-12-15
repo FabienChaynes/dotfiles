@@ -56,7 +56,7 @@ cursor-scroll = ns-resize
 
 enable-ipc = true
 
-tray-position = right
+tray-position = ${env:TRAY_POSITION:}
 
 [module/i3]
 type = internal/i3
