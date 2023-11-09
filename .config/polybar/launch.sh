@@ -11,7 +11,7 @@ if type "xrandr"; then
     MONITOR=$m TRAY_POSITION=right polybar --reload default 2>&1 | tee -a /tmp/polybar_$m.log & disown
   done
   for m in $(xrandr --query | grep " connected" | grep -v " primary" |  cut -d" " -f1); do
-    monitor_pos=`xrandr | grep " connected" | sed 's/primary //g' | cut -d' ' -f1,3 | grep $m | cut -d' ' -f2`
+    monitor_pos=`xrandr | grep " connected" | sed 's/primary //g' | cut -d' ' -f1,3 | grep "^$m " | cut -d' ' -f2`
     first_monitor=`xrandr | grep " connected" | sed 's/primary //g' | cut -d' ' -f1,3 | grep $monitor_pos | head -1 | cut -d' ' -f1`
     # If monitors are mirrored, only launch the bar for the first monitor
     if [ $m = $first_monitor ]
